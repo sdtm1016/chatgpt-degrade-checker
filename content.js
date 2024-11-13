@@ -30,10 +30,10 @@
             ChatGPT Degrade Checker
     </div>
         <div style="margin-bottom: 10px;">
-            <strong>PoW Information</strong>
+            <strong>PoW 信息</strong>
         </div>
         <div id="content">
-            PoW Difficulty: <span id="difficulty">N/A</span><span id="difficulty-level" style="margin-left: 3px"></span>
+            PoW难度: <span id="difficulty">N/A</span><span id="difficulty-level" style="margin-left: 3px"></span>
             <span id="difficulty-tooltip" style="
                 cursor: pointer;
                 color: #fff;
@@ -47,7 +47,7 @@
                 border: 1px solid #fff;
                 margin-left: 3px;
             ">?</span><br>
-            IP Quality: <span id="ip-quality">N/A</span><br>
+            IP质量: <span id="ip-quality">N/A</span><br>
             <span id="persona-container" style="display: none">User Type: <span id="persona">N/A</span></span>
         </div>
        
@@ -142,8 +142,7 @@
 	// 创建提示框
 	const tooltip = document.createElement("div");
 	tooltip.id = "tooltip";
-	tooltip.innerText =
-		"A lower value indicates higher PoW difficulty, suggesting that ChatGPT may consider your IP as higher risk.";
+	tooltip.innerText = "这个值越小，代表PoW难度越高，ChatGPT认为你的IP风险越高。";
 	tooltip.style.position = "fixed";
 	tooltip.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
 	tooltip.style.color = "#fff";
@@ -206,26 +205,26 @@
 			color = "#F44336";
 			secondaryColor = "#d32f2f";
 			textColor = "#ff6b6b";
-			level = "(Difficult)";
-			qualityText = "High Risk";
+			level = "(困难)";
+			qualityText = "高风险";
 		} else if (hexLength === 3) {
 			color = "#FFC107";
 			secondaryColor = "#ffa000";
 			textColor = "#ffd700";
-			level = "(Medium)";
-			qualityText = "Moderate";
+			level = "(中等)";
+			qualityText = "有风险";
 		} else if (hexLength === 4) {
 			color = "#8BC34A";
 			secondaryColor = "#689f38";
 			textColor = "#9acd32";
-			level = "(Easy)";
-			qualityText = "Good";
+			level = "(简单)";
+			qualityText = "低风险";
 		} else {
 			color = "#4CAF50";
 			secondaryColor = "#388e3c";
 			textColor = "#98fb98";
-			level = "(Very Easy)";
-			qualityText = "Excellent";
+			level = "(极易)";
+			qualityText = "优秀";
 		}
 
 		setIconColors(color, secondaryColor);
