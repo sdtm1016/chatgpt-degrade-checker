@@ -3,8 +3,6 @@
 	"name": "ChatGPT Degrade Checker",
 	"version": "1.0",
 	"description": "A Chrome extension to display PoW information and IP quality on ChatGPT.",
-	"permissions": ["webRequest"],
-	"host_permissions": ["*://chatgpt.com/*"],
 	"content_scripts": [
 		{
 			"matches": ["*://chatgpt.com/*"],
